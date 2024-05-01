@@ -9,12 +9,12 @@ function SearchBox() {
   const handleSubmit = (e) => {
     e.preventDefault();
     router.push(`/search/${search}`);
+    setSearch("");
   };
   return (
     <form
       className="flex justify-between px-5 max-w-6xl mx-auto"
       onSubmit={handleSubmit}
-      setSearch("");
     >
       <input
         type="text"
